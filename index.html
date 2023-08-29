@@ -149,7 +149,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 900px;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(174, 174, 174);
     z-index: -1;
     opacity: 1.5;
 }
@@ -158,7 +158,7 @@ nav a:hover {
 .image-inside-box {
   position: absolute;
   bottom: 4%;
-  left: 20%;
+  left: 16%;
   transform: translateX(-50%);
   width: 300px;
   height: 300px;
@@ -339,6 +339,46 @@ nav a:hover {
     bottom: 15%;
     left:69%;
 }
+@media only screen and (max-width: 600px) {
+    /* 適應移動設備的調整 */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .image-container {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+    }
+    
+    .flex-container {
+        flex-direction: column;
+    }
+
+    /* 額外元素的響應式調整 */
+    .black-box, .white-box {
+        top: 100%; /* 調整位置 */
+        height: auto; /* 自適應高度 */
+    }
+
+    .image-inside-box, .image-inside-box1, .image-inside-box2, .image-inside-box3 {
+        position: static; /* 調整位置 */
+        transform: none;
+        width: 100%;
+        height: auto;
+        margin-top: 1rem; /* 添加間距 */
+    }
+
+    .text-block, .text-block1, .text-block2, .text-block3 {
+        font-size: 12px; /* 調整字體大小 */
+    }
+}
 
 </style>
 </head>
@@ -420,7 +460,7 @@ nav a:hover {
     <p class="text-block third">使用條款與個人須知</p>
     <p class="text-block first">連絡電話:(02)1234-5678</p>
     <p class="text-block second">服務時間: 週一至週五 09:00-18:00，六日與國定假日除外</p>
-        <img src="pic\chillfee2.png" alt="Image" class="image-inside-box">
+        <img src="pic\chillfee.png" alt="Image" class="image-inside-box">
         <img src="pic\instagram.png" alt="Image" class="image-inside-box1">
         <img src="pic\line.png" alt="Image" class="image-inside-box2">
         <img src="pic\facebook.png" alt="Image" class="image-inside-box3">
