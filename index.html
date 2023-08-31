@@ -1,462 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-<title>My Coffee Shop</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #ffffff;
-    color: rgb(121, 121, 121);
-    text-align: center;
-    padding: 1rem;
-}
-
-.container {
-    max-width: 1200px;
-    height: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: space-between;
-}
-
-nav {
-    background-color: #000000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-}
-
-nav a:hover {
-    color: rgb(204, 136, 35);
-}
-
-.english-text {
-    font-size: 10px;
-    display: block;
-    margin-top: 2%; /* 添加 2% 的间距 */
-    position: relative; /* 开启定位 */
-    top: 2%; /* 调整英文文本的位置 */
-}
-.about-link img {
-    margin-right: 10px; /* 在 img 右边添加 10px 的外边距 */
-}
-.about-link .chinese-text {
-    margin-right: 5px; /* 在中文文本右边添加 5px 的外边距 */
-}
-
-.image-container {
-    position: absolute; /* 使用绝对定位 */
-    width: calc(48% - 0px); /* 计算宽度，包括边距 */
-    top: 50%; /* 居中垂直位置 */
-    transform: translateY(-50%); /* 通过负的一半高度来居中垂直位置 */
-    cursor: pointer;
-}
-
-/* 调整每个 .image-container 的左边距百分比 */
-.image-container:nth-child(1) {
-    left: 1%;
-    top:133%;
-}
-
-.image-container:nth-child(2) {
-    left: 1%;
-    top:193%
-}
-
-.image-container:nth-child(3) {
-    left: 51%;
-    top:133%
-}
-
-.image-container:nth-child(4) {
-    
-    left: 51%;
-    top:193%
-}
-
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.556);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-family: 'cwTeXYen';
-    font-size: 60px;
-
-}
-
-.image-container:hover .image-overlay {
-    opacity: 1;
-}
-
-.image-container:hover img {
-    transform: scale(0.1);
-}
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping to next line */
-    justify-content: space-between; /* Distribute evenly on each line */
-}
-
-.white-box {
-    position: absolute; /* 将方块固定在浏览器视窗内 */
-   top:50%;
-    left: 0;
-    width: 100%;
-    height: 1295px;
-    background-color: rgb(255, 255, 255);
-    z-index: -1;
-    opacity: 1.5;
-}
-.black-box {
-    position: absolute; /* 将方块固定在浏览器视窗内 */
-  top:156%;
-    left: 0;
-    width: 100%;
-    height: 900px;
-    background-color: rgb(201, 201, 201);
-    z-index: -1;
-    opacity: 1.5;
-}
-
-
-.image-inside-box {
-  position: absolute;
-  bottom: 4%;
-  left: 16%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 300px;
-}
-
-.image-inside-box1{
-  position: absolute;
-  bottom: 34.2%;
-  left: 35%;
-  transform: translateX(-50%);
-  width: 55px;
-  height: 55px;
-}
-
-.image-inside-box2{
-  position: absolute;
-  bottom: 34%;
-  left: 40%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-}
-
-.image-inside-box3{
-  position: absolute;
-  bottom: 33%;
-  left: 45%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
-}
-
-#scrollToTopButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 120px;
-  height: 40px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 20px; /* 使用半个高度值作为圆角半径，实现椭圆形状 */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
-.text-block {
-    font-size: 14px;
-    color: white;
-}
-
-.first{
-    position:absolute;
-    bottom: 2%;
-    left:43.5%;
-}
-.second{
-    position:absolute;
-    bottom: 2%;
-    left:55%;
-}
-.third{
-    position:absolute;
-    bottom: 2%;
-    left:33%;
-}
-.text-block1 {
-    font-size: 20px;
-    color: white;
-}
-.forth
-{
-    position:absolute;
-    bottom: 1.4%;
-    left:42.2%;
-}
-.fivth
-{
-    position:absolute;
-    bottom: 1.4%;
-    left:54%;
-}
-.text-block2 {
-    font-size: 20px;
-    color: white;
-}
-.six
-{
-    position:absolute;
-    bottom: 25%;
-    left:33%;
-}
-
-.seven
-{
-    position:absolute;
-    bottom: 25%;
-    left:45%;
-}
-
-.eight
-{
-    position:absolute;
-    bottom: 25%;
-    left:57%;
-}
-
-.nine
-{
-    position:absolute;
-    bottom: 25%;
-    left:69%;
-}
-.text-block3 {
-    font-size: 14px;
-    color: white;
-}
-.ten{
-    position:absolute;
-    bottom: 21%;
-    left:33%;
-}
-.ele{
-    position:absolute;
-    bottom: 18%;
-    left:33%;
-}
-.twe{
-    position:absolute;
-    bottom: 15%;
-    left:33%;
-}
-.thr{
-    position:absolute;
-    bottom: 21%;
-    left:45%;
-}
-.fur{
-    position:absolute;
-    bottom: 18%;
-    left:45%;
-}
-.fiv{
-    position:absolute;
-    bottom: 15%;
-    left:45%;
-}
-.sixx{
-    position:absolute;
-    bottom: 21%;
-    left:57%;
-}
-.sev{
-    position:absolute;
-    bottom: 18%;
-    left:57%;
-}
-.eig{
-    position:absolute;
-    bottom: 15%;
-    left:57%;
-}
-.nin{
-    position:absolute;
-    bottom: 21%;
-    left:69%;
-}
-.tan{
-    position:absolute;
-    bottom: 18%;
-    left:69%;
-}
-.elev{
-    position:absolute;
-    bottom: 15%;
-    left:69%;
-}
-@media (max-width: 768px) {
-    /* 在螢幕寬度小於 768px 時的樣式 */
-    .container {
-        flex-direction: column; /* 垂直排列元素 */
-        align-items: center; /* 居中對齊 */
-        height: auto; /* 不再限制高度 */
-    }
-    .image-container {
-        position: relative;/* 移除 absolute 定位 */
-        top:100%;
-        width: 100%; /* 充滿父容器寬度 */
-        max-width: 300px; /* 最大寬度限制 */
-        margin: 0 auto; /* 居中對齊 */
-        transform: none; /* 移除垂直定位 */
-         margin-top: 20px;
-    }
-    .black-box, .white-box {
-        position: static; /* 不再固定在視窗內 */
-    }
-    .text-block1, .text-block2, .text-block3 {
-        font-size: 16px; /* 調整字體大小 */
-    }
-}
-
-/* 響應式字體大小 */
-@media (max-width: 1200px) {
-    body {
-        font-size: 16px; /* 調整整體字體大小 */
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChillFee</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<img src="pic\chillfee.png" height="100" width="100">
-</header>
-<nav>
-    <a href="#" class="about-link">
-        <img src="pic\cat4.png" alt="About Us Icon" height="30" width="17">
-        <span class="chinese-text">關於我們</span>
-        <span class="english-text">About Us</span>
-<a href="#"class="about-link">
-    <img src="pic\cat3.png" alt="News Icon"height="30" width="17">
-    <span class="chinese-text">最新消息</span>
-    <span class="english-text">News</span>
-</a>
-<a href="menu.html"class="about-link">
-    <img src="pic\cat2.png" alt="Menu Icon"height="30" width="17">
-    <span class="chinese-text">菜單</span>
-        <span class="english-text">Menu</span>
-</a>
-<a href="#"class="about-link">
-    <img src="pic\cat1.png" alt="Feedback Icon"height="30" width="17">
-    <span class="chinese-text">意見反饋</span>
-        <span class="english-text">Feedback</span>
-</a>
-</nav>
-<img src="pic\cf.jpg" alt="Image" style="width: 100%;" >
-<div class="container">
-<div class="menu-item">
-<div class="flex-container">
-<div class="image-container">
-<img src="pic\cf1.jpg" alt="Image" >
-<div class="image-overlay">
-<p>關於我們</p>
-</div>
-</div>
-<div class="image-container">
-<img src="pic\cf3.jpg" alt="Image">
-<div class="image-overlay">
-<p>最新消息</p>
-</div>
-</div>
-<div class="image-container">
-<img src="pic\cf2.jpg" alt="Image">
-<div class="image-overlay">
-<p>菜單</p>
-</div>
-</div>
-<div class="image-container">
-<img src="pic\cf4.jpg" alt="Image">
-<div class="image-overlay">
-<p>意見反饋</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="black-box">
-    <p class ="text-block3 nin">常見問題</p>
-    <p class ="text-block3 tan">意見回饋</p>
-    <p class ="text-block3 elev">食材來源</p>
-    <p class ="text-block3 sixx">instagram</p>
-    <p class ="text-block3 sev">Line</p>
-    <p class ="text-block3 eig">Facebook</p>
-    <p class ="text-block3 thr">夥伴福利</p>
-    <p class ="text-block3 fur">夥伴公約</p>
-    <p class ="text-block3 fiv">發展與晉升</p>
-    <p class ="text-block3 ten">關於 ChillFee</p>
-    <p class ="text-block3 ele">企業責任</p>
-    <p class ="text-block3 twe">企業公告</p>
-    <p class ="text-block2 nine">顧客關懷</p>
-    <p class ="text-block2 eight">社群平台</p>
-    <p class ="text-block2 seven">夥伴招募</p>
-    <p class ="text-block2 six">認識我們</p>
-    <p class ="text-block1 fivth">|</p>
-    <p class ="text-block1 forth">|</p>
-    <p class="text-block third">使用條款與個人須知</p>
-    <p class="text-block first">連絡電話:(02)1234-5678</p>
-    <p class="text-block second">服務時間: 週一至週五 09:00-18:00，六日與國定假日除外</p>
-        <img src="pic\chillfee.png" alt="Image" class="image-inside-box">
-        <img src="pic\instagram.png" alt="Image" class="image-inside-box1">
-        <img src="pic\line.png" alt="Image" class="image-inside-box2">
-        <img src="pic\facebook.png" alt="Image" class="image-inside-box3">
-</div>
-<div class="white-box">
-<button id="scrollToTopButton">返回頂部</button>
+    <header>
+    <img src="pic/chillfee.png" alt="Logo" class="logo">
+    <button class="menu">&#9776;</button>
+    <nav>
+    <ul>
+        <li><a href="#" class="about-link"> <img src="pic\cat4.png" alt="About Us Icon" height="30" width="17">最新消息</a></li>
+        <li><a href="#" class="about-link"> <img src="pic\cat3.png" alt="News Icon"height="30" width="17">關於我們</a></li>
+        <li><a href="#" class="about-link"> <img src="pic\cat2.png" alt="News Icon"height="30" width="17">菜單</a></li>
+        <li><a href="#" class="about-link"> <img src="pic\cat1.png" alt="News Icon"height="30" width="17">意見反饋</a></li>                
+    </ul>
+    </nav>  
+    </header>   
+    <main>
+
+    <section class="news">
+    <h2>貓咪物語咖啡，強勢登場 !</h2>
+    <p>貓咪的溫度，咖啡的濃韻，放慢步調感受世界</p>
+    <p><a href="#">瞭解更多</a></p>
+    </section>
+
+    <section class="slogan">
+    <blockquote>" 自然滋味，咖啡豆的新鮮演奏，<br>咖啡師的魔法編織，讓您在忙碌的世界盡享愜意 "</blockquote>
+    </section>
+    
+    <section class="shop">
+    <div class="info">
+    <h2>12月1日貓咪旗艦店隆重開張！</h2>
+    <p>在這溫馨的角落，微風輕拂，咖啡香氣瀰漫，等待著您的來臨<br>
+       即日起來店消費加 LINE 好友可獲精緻小點心，等您一同品味！</p>
+    </div>
+    </section>
+
+    <section class="product">
+        <div>
+            <img src="pic/cf3.jpg" alt="經典孟買貓">
+            <h3>經典孟買貓</h3>
+            <p>咖啡豆帶來的原始香氣<br>讓心靈在細細的滋味中漫遊</p>
+        </div>
+        <div>
+            <img src="pic/cf4.jpg" alt="米克斯橘貓">
+            <h3>米克斯橘貓</h3>
+            <p>柔融的奶香與咖啡的深邃<br>讓美好在舌尖輕輕綻放</p>
+        </div>
+        <div>
+            <img src="pic/cf6.jpg" alt="曼赤肯貓">
+            <h3>曼赤肯貓</h3>
+            <p>香醇牛奶撞擊現沖茶葉<br>奶茶渲染整天心情</p>
+        </div>
+    </section>
+    <section class="newsletter">
+        <div class="newsletter-text">
+            <div class = "text-block-container0">
+            <div class="text-block-container1">
+                <h2 class="text-block-title1">認識我們</h2>
+                <p class="text-block1 ten">關於 ChillFee</p>
+                <p class="text-block1 ele">企業責任</p>
+                <p class="text-block1 twe">企業公告</p>
+            </div>
+            <div class="text-block-container4">
+                <h2 class="text-block-title4">招募夥伴</h2>
+                <p class="text-block3 nin">夥伴福利</p>
+                <p class="text-block3 tan">夥伴公約</p>
+                <p class="text-block3 elev">發展與晉升</p>
+            </div>  
+            <div class="text-block-container2">
+                <h2 class="text-block-title2">社群平台</h2>
+                <p class="text-block2 sixx">instagram</p>
+                <p class="text-block2 sev">Line</p>
+                <p class="text-block2 eig">Facebook</p>
+            </div>
+            
+            <div class="text-block-container3">
+                <h2 class="text-block-title3">顧客關懷</h2>
+                <p class="text-block3 nin">常見問題</p>
+                <p class="text-block3 tan">意見回饋</p>
+                <p class="text-block3 elev">食材來源</p>
+            </div>  
+            <div class="newsletter-form">
+                <p>歡迎訂閱 ChillFee 電子報，可不定期收到限定優惠喔！</p>
+                <form>
+                    <input type="email" placeholder="請輸入您的 Email" required>
+                    <button type="submit">送出</button>
+                </form>
+            </div>
+    </section>
+    </main>
+    <footer>
+        <p>Copyright © 2023 ChillFee All Rights Reserved.</p>
+    </footer>
+    <button id="scrollToTopButton">返回頂部</button>
 <script>
 const scrollToTopButton = document.getElementById("scrollToTopButton");
 
