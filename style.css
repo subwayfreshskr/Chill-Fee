@@ -100,7 +100,7 @@ header a:hover {
     justify-content: center;
 }
 .info h2 {
-    font-size:40px;
+    font-size:20px;
     margin-bottom: 30px;
 }
 .info p {
@@ -124,121 +124,68 @@ header a:hover {
     border-radius: 10px;;
 }
 .product h3 {
-    font-size: 20px;    
+    font-size: 24px;    
     margin: 20px 0;
 }
 .product p {
-    font-size:14px;
+    font-size:16px;
     line-height: 1.6em;
 }
 .newsletter {
-    background-color: #bebebe;
-    color: white;
-    padding: 20px 0;
+    background-color: #0e4a0747;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
+    justify-content: space-between; /* 使表单和联系信息平行排列 */
+    border: 1px solid rgb(255, 255, 255);
+    /* 其他 Newsletter 样式属性 */
 }
-
-.newsletter-text {
-    flex: 1;
-    padding: 0 20px;
-}
-
 .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 50px;
 }
-.pic {
-    width: 300px; /* Adjust the width of the logo */
-    display: flex;
-    align-items: center; /* Vertically align the image and other content */
-}
-.newsletter input,
-.newsletter button {
-    background-color: transparent;
-    color: white;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
+.contact-info{
+    margin-left: 300px;
+    flex: 1; 
 }
 
-.newsletter input {
-    width: 350px;
-    margin-right: 15px;
+.newsletter-form button:hover {
+    cursor: pointer; /* 让鼠标悬停时显示手型光标 */
+}
+.newsletter-form h2{
+    text-align:left; /* 标题居中 */
+}
+.contact-info h2 {
+    text-align:left;
 }
 
-.newsletter button {
-    width: 80px;
-    cursor: pointer;
+.newsletter-form form {
+    text-align: left; /* 表单内元素居中 */
 }
 
-.newsletter-text h2,
-.newsletter-text p {
+.newsletter-form input{
+    width: 300px;
+    height: 25px;
+    display: inline-block; 
+    margin: 10px auto;
+}
+
+.newsletter-form button {
+    width: 50px;
+    height: 30px;
+    display: inline-block; 
+    margin: 10px auto; 
+}
+
+.contact-info p {
     text-align: left;
 }
 
-.text-block-container0 {
-    display: flex;
-    flex-direction: row;
-    gap: 100px; /* 调整此值以控制文本块之间的间距 */
-}
-.text-block-title1 {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 10px; /* 控制标题与容器之间的间距 */
-}
-.text-block-title2 {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 6px; /* 控制标题与容器之间的间距 */
-}
-.text-block-title3 {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 10px; /* 控制标题与容器之间的间距 */
-}
-.text-block-title4 {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 10px; /* 控制标题与容器之间的间距 */
+.contact-info ul {
+    list-style: none; /* 去除列表样式 */
+    padding: 0;
 }
 
-.text-block-container1 {
-    display: flex;
-    flex-direction: column;
-    gap: 7px; /* 调整此值以控制文本块之间的间距 */
-}
-.text-block-container2 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* 调整此值以控制文本块之间的间距 */
-}
-.text-block-container3 {
-    display: flex;
-    flex-direction: column;
-    gap: 7px; /* 调整此值以控制文本块之间的间距 */
-}
-.text-block-container4 {
-    display: flex;
-    flex-direction: column;
-    gap: 7px; /* 调整此值以控制文本块之间的间距 */
-}
-
-.text-block3,
-.text-block2,
-.text-block1 {
-    font-size: 16px;
-    color: white;
+.contact-info li {
+    margin: 5px 0; /* 调整列表项之间的间距 */
 }
 
 input::placeholder {
@@ -334,4 +281,5 @@ header h1 {
 .newsletter-form {
     align-items: center; /* 居中对齐 */
 }
+
 }
