@@ -193,7 +193,7 @@ input::placeholder {
 }
 input:focus {
     outline: none; 
-    border-color:#000000; 
+    border-color:#ffffff; 
 }
 footer {
     background-color:#a7a7a7;
@@ -226,60 +226,141 @@ footer {
     justify-content: center;
     font-size: 14px;
   }
-/* 響應式設計語法 */
-@media screen and (max-width: 768px) {
-header ul {
-    display:none;
-}
-header h1 {
-    left:50%;
-    transform: translateX(-50%);
-}
-.news h2 {
-    font-size:40px;
-}
-.menu {
-    display:block;
-    background-color: transparent;
-    color:white;
-    font-size: 35px;
-    position:absolute;
-    top:15px;
-    left:20px;
-    border:none;
-    cursor: pointer;
-}
-.shop {
-    flex-direction: column;
-}
-.shop img {
-    width:100%;
-}
-.info {
-    width:100%;
-    padding:40px 0;
-}
-.info h2 {
-    font-size:30px;
-}
-.product {
-    flex-direction: column;
-    padding: 60px 0;
-}
-.product div {
-    margin-bottom: 30px;
-}
-.newsletter {
-    flex-direction: column; /* 垂直排列在小屏幕上 */
-}
 
-.newsletter-text,
-.newsletter-form {
-    padding: 0; /* 移除内边距 */
-}
+    
+    /* 響應式設計語法 */
+    @media screen and (max-width: 768px) {
+    body{
+           background-color: #fff;
+        }
+        header{
+            height: 50px;
+        }
+    header ul {
+        display:none;
+    }
+    header h1 {
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .logo{
+       margin-left: 35%;
+       margin-top: 7%;
+        width: 100px; /* Adjust the width of the logo */
+    height: auto;
+    }
+    .slogan {
+        height:60px;
+        font-size: 8px;
+        background-size: contain;  
+     }
+    .news h2 {
+        font-size:22px;
+    }
+    .news p{
+        font-size: 12px;
+    }
+ 
+    .shop {
+        background-size:cover;
+        flex-direction: column;
+    }
+    .shop img {
+        width:100%;
+    }
 
-.newsletter-form {
-    align-items: center; /* 居中对齐 */
-}
+    .info {
+        width: 100%;
+        background-image: url("pic/cf2.jpg");
+        background-size: 140%;
+        background-repeat: no-repeat;
+        padding:40px 0;
+        
+    }
+    .info h2 {
+        font-size:17px;
+        color: rgb(204, 136, 35);
+    }
+    .info p{
+        font-size: 8.5px;
+    }
+    .product {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    .product img {
+        width:80%;
+        border-radius: 10px;;
+        align-items: center;
+    }
+    .product div {
+        margin-bottom: 30px;
+    }
+    .newsletter{
+        background-color: rgb(188,205,186);
+        display: flex;
+        flex-direction: column;
+    }
+    .newsletter-form {
+        margin-left: 10px;
+        margin-top: 5px;
+        font-size: 10px;
+    }
 
+    .contact-info {
+        margin-left: 10px;
+        font-size: 9.5px;
+    }
+    .newsletter-form button {
+        width: 30px;
+        height: 15px;
+        display: inline-block; 
+        margin: 10px auto; 
+        font-size: 7px;
+    }
+    .newsletter-form input{
+        width: 120px;
+        height: 9px;
+        display: inline-block; 
+        margin: 10px auto;
+    }
+    .newsletter-form h2{
+        text-align:left; /* 标题居中 */
+        font-size: 10px;
+    }
+
+    footer{
+    font-size: 7px;
+    height:15px;
+    }
+
+    #scrollToTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 20px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 20px; /* 使用半个高度值作为圆角半径，实现椭圆形状 */
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6px;
+      }
+
+      .menu {
+        display:block;
+        background-color: transparent;
+        color:rgb(0, 0, 0);
+        font-size: 20px;
+        position:absolute;
+        top:13px;
+        left:5px;
+        border:none;
+        cursor: pointer;
+    }
+    
 }
