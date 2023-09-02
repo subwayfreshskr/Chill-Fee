@@ -244,9 +244,9 @@ footer {
         transform: translateX(-50%);
     }
     .logo{
-       margin-top: 5%;
+       margin-top: 2%;
        margin-left: 40%;
-        width: 100px; /* Adjust the width of the logo */
+        width: 150px; /* Adjust the width of the logo */
         height: auto;
     }
     .slogan {
@@ -254,6 +254,7 @@ footer {
         font-size: 8px;
         background-size: 140%;
         background-repeat: no-repeat;
+       
      }
     .news h2 {
         font-size:22px;
@@ -276,15 +277,23 @@ footer {
         background-size: 140%;
         background-repeat: no-repeat;
         padding:40px 0;
-        
     }
     .info h2 {
         font-size:17px;
         color: rgb(204, 136, 35);
+        text-shadow: -0.2px -0.2px 0 black;
+        text-shadow: 0.2px -0.2px 0 black;
+        text-shadow: -0.2px 0.2px 0 black;
+        text-shadow: 0.2px 0.2px 0 black;
+       
     }
     .info p{
         font-size: 8.5px;
         color: rgb(0, 0, 0);
+        text-shadow: -0.2px -0.2px 0 black;
+        text-shadow: 0.2px -0.2px 0 black;
+        text-shadow: -0.2px 0.2px 0 black;
+        text-shadow: 0.2px 0.2px 0 black;
     }
     .product {
         flex-direction: column;
@@ -299,17 +308,19 @@ footer {
         margin-bottom: 30px;
     }
     .newsletter{
-        background-color: rgb(188,205,186);
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
     }
     .newsletter-form {
+        color: rgb(204, 136, 35);
         margin-left: 10px;
         margin-top: 5px;
         font-size: 10px;
     }
 
     .contact-info {
+        color: rgb(204, 136, 35);
         margin-left: 10px;
         font-size: 9.5px;
     }
