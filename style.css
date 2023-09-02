@@ -244,10 +244,10 @@ footer {
         transform: translateX(-50%);
     }
     .logo{
+       margin-top: 5%;
        margin-left: 40%;
-       margin-top: 7%;
         width: 100px; /* Adjust the width of the logo */
-    height: auto;
+        height: auto;
     }
     .slogan {
         height:60px;
@@ -284,7 +284,7 @@ footer {
     }
     .info p{
         font-size: 8.5px;
-        color: rgb(232, 196, 143);
+        color: rgb(0, 0, 0);
     }
     .product {
         flex-direction: column;
@@ -318,7 +318,7 @@ footer {
         height: 15px;
         display: inline-block; 
         margin: 10px auto; 
-        font-size: 7px;
+        font-size: 5px;
     }
     .newsletter-form input{
         width: 120px;
