@@ -245,7 +245,7 @@ footer {
     }
     .logo{
        margin-top: 2%;
-       margin-left: 38%;
+       margin-left: 36%;
         width: 150px; /* Adjust the width of the logo */
         height: auto;
     }
@@ -281,20 +281,14 @@ footer {
     .info h2 {
         font-size:17px;
         color: rgb(204, 136, 35);
-        text-shadow: -0.2px -0.2px 0 black;
-        text-shadow: 0.2px -0.2px 0 black;
-        text-shadow: -0.2px 0.2px 0 black;
-        text-shadow: 0.2px 0.2px 0 black;
+        text-shadow: 0.1px 0.1px 0.1px 0.1px rgb(255, 255, 255);
        
     }
     .info p{
         margin-top: 1%;
         font-size: 8.5px;
         color: rgb(0, 0, 0);
-        text-shadow: -0.1px -0.1px 0 black;
-        text-shadow: 0.1px -0.1px 0 black;
-        text-shadow: -0.1px 0.1px 0 black;
-        text-shadow: 0.1px 0.1px 0 black;
+        text-shadow: 0.1px 0.1px 0.1px 0.1px rgb(255, 255, 255);
     }
     .product {
         flex-direction: column;
