@@ -218,4 +218,85 @@ footer {
     height: auto;
   }
 
+  /* 預設的樣式：手機螢幕 */
+@media (max-width: 768px) {
+  .header {
+      height: 10vh;
+  }
+
+  .header img {
+      max-width: 6%;
+  }
+
+  .banner {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 40px; /* 調整標題大小 */
+      letter-spacing: 5px;
+  }
+
+  .menu {
+      grid-template-columns: 1fr; /* 變為單列顯示 */
+      padding: 20px;
+  }
+
+  .menu-item img {
+      width: 80%; /* 限制圖片大小 */
+  }
+
+  .container {
+      padding: 20px;
+  }
+
+  .slideshow-wrapper {
+      width: 100%;
+  }
+
+  .slide-button {
+      font-size: 24px; /* 調整按鈕大小 */
+      padding: 8px;
+  }
+
+  .goods {
+      padding: 20px;
+  }
+
+  .carousel-item {
+      min-width: 150px; /* 縮小商品顯示 */
+      margin: 0 20px;
+  }
+
+  .carousel-btn {
+      font-size: 24px; /* 調整按鈕大小 */
+      padding: 8px;
+  }
+
+  footer {
+      flex-direction: column; /* 改為縱向排列 */
+      align-items: center;
+      gap: 50px;
+      padding: 20px;
+  }
+
+  .footer-section {
+      align-items: center; /* 居中顯示 */
+  }
+
+  .footer-section img {
+      width: 25px; /* 縮小社群圖標 */
+      height: 25px;
+  }
+
+  .right-img img {
+      width: 150px;
+      height: auto;
+  }
+
+  .image-text1 p {
+      font-size: 14px; /* 調整文字大小 */
+  }
+}
+
   
