@@ -225,7 +225,7 @@ footer {
   }
 
   .header img {
-      max-width: 6%;
+      max-width: 8%;
   }
 
   .banner {
@@ -264,7 +264,7 @@ footer {
   }
 
   .carousel-item {
-      min-width: 150px; /* 縮小商品顯示 */
+      min-width: 100px; /* 縮小商品顯示 */
       margin: 0 20px;
   }
 
