@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 * {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+  
 .header{
     display: flex;
     justify-content: center;
@@ -225,7 +230,7 @@ footer {
   }
 
   .header img {
-      max-width: 8%;
+      max-width: 10%;
   }
 
   .banner {
@@ -264,7 +269,7 @@ footer {
   }
 
   .carousel-item {
-      min-width: 100px; /* 縮小商品顯示 */
+      min-width: 70px; /* 縮小商品顯示 */
       margin: 0 20px;
   }
 
